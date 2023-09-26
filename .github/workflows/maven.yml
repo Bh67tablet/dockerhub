@@ -26,6 +26,7 @@ jobs:
        path: target/*.war
     
   deploy:
+    if: github.ref_name == 'master'
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -36,4 +37,3 @@ jobs:
     - name: Deployment
       run: |
        ls -alrt
-       
