@@ -1,24 +1,10 @@
 name: GitHub Actions Reusable Workflow
 run-name: GitHub Action Reusable Workflow
-
 on:
   push:
     branches: [ "master", "develop" ]
   pull_request:
     branches: [ "master" ]
-
-
-jobs:
-  Basic-Workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Executing Reusable Workflow"
-
-
-name: Reusable Workflow Caller
-
-on:
-  push:
 
 jobs:
   Reusable-caller-job:
